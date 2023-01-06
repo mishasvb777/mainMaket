@@ -184,7 +184,7 @@ body{
         top: 6px;
         left: -20px;
         position: absolute;
-        background-image: url("/image/arrow.svg");
+        background-image: url("../image/arrow.svg");
     }
 
     .description__linkMore a:focus{
