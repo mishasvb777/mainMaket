@@ -1,0 +1,329 @@
+@import "reset.css";
+@import "fonts.css";
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.request__menu span{
+    display: none;
+}
+
+.header__menu a{    
+    display: block;
+    width: 40px;
+    height: 40px;   
+    background-image: url('/image/burger.svg');
+}
+
+.header__menu a:focus{
+    background-image: url('/image/burger_focused.svg');
+}
+
+.container{
+    margin: 18.6px 16px;    
+}
+
+/*==== Декор под хедером ====*/
+
+.header:after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #D9FFF5;
+    left: -18px;
+    bottom: 0;        
+}
+
+/* блок навигации в теле main*/
+.description__navigation{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.description__navigation {
+    scrollbar-width: none; /* firefox */
+}
+.description__navigation::-webkit-scrollbar { /* webkit */
+    width: 0;
+    height: 0;
+}
+
+.description__navItem{ 
+    position: relative;       
+    padding: 10px;
+}
+
+.description__navItem:first-child{
+    padding-left: 0;
+}
+
+.description__navItem a{  
+    font-family: "TTLakes-Medium", Arial, serif; 
+    border: 2px solid rgba(0, 0, 0, 0.0);    
+    color: #7E7E82; 
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 8px;
+    white-space: nowrap;       
+}
+
+.description__navItem a:focus,
+.description__navItem a:hover{    
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.desccription__footer{
+    margin-top: 24px;
+}
+
+@media (min-width: 320px){      
+    /* ========= Hedear ==============*/
+
+    .header{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding-bottom: 19px;
+        align-items: center;
+    }       
+
+    .header__logo {
+        position: relative;
+    }
+
+    .header__logo:after{
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: -18px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        margin-left: -18px;
+        border-radius: 1px;
+    }
+   
+    /*============= Request ============*/
+    .request__menu{
+        display: flex;
+    }   
+
+    .request__item a:focus span{
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+    } 
+
+    .request__item span{
+        border: 2px solid rgba(0, 0, 0, 0.0);
+    }    
+
+    .request__item:first-child{
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    /*============ Main ==============*/
+
+    .description__title{
+        font-family: "TTLakes-Bold", Arial, sans-serif;
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 28px;
+    }
+
+    .description__title:before{
+        content:"";
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        background-color: #41F6D7;
+        border-radius: 0px 20px 20px 0px;
+        left: 0;
+    }
+
+    .description__text p {
+        font-family: "TTLakes-Light", Arial, serif; 
+        line-height: 18px;        
+    }
+
+    .description__linkMore{        
+        margin-top: 18px;
+        position: relative;
+    }
+
+    .description__secondP {
+        display: none;    
+    }
+
+    .description__linkMore a{
+        position: relative;
+        font-family: "TTLakes-Medium", Arial, serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        margin-left: 32px;
+        border: 2px solid rgba(0, 0, 0, 0.0); 
+    }
+
+
+    .description__linkMore a:before{
+        content: "";
+        height: 11px;
+        width: 8px;
+        top: 6px;
+        left: -20px;
+        position: absolute;
+        background-image: url("/image/arrow.svg");
+    }
+
+    .description__linkMore a:focus{
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+    }
+  
+    .description__image{
+        margin: 20px 0 20px -16px;
+        width: 100vw;
+    }
+}
+
+@media (min-width: 768px){
+    .header__menu{
+        margin-right: 42px;
+    }
+    .header__logo {
+        flex-grow: 1;
+    }
+
+    .header__logo:after{        
+        content: none;        
+    }
+
+    .header__logo:before{
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        margin-left: -18px;
+        border-radius: 1px;
+    }
+
+/* ========= Cсылки обратной связи ===========*/
+    .feedback__list {
+        display: flex;
+        position: relative; 
+        flex-grow: 1;               
+    }
+    .feedback__item{
+        width: 40px;
+        height: 40px; 
+        margin-right: 16px;       
+    }
+
+    .feedback__call{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(/image/call.svg);       
+    }   
+    .feedback__chat{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(/image/chat.svg);
+    }
+    .feedback__profile{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(/image/profile.svg);
+    }
+
+    .feedback__list:after{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        margin-left: -18px;
+        border-radius: 1px;
+    }
+
+    .desccription__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .description__image{
+        border-radius: 20px;        
+        width: 360px;
+    }
+
+    .description__text{                 
+       width: 312px;  
+       height: 130px;
+       overflow: hidden;
+       font-size: 14px;
+       line-height: 20px;
+       letter-spacing: 0.2px;    
+       color: #1B1C21;
+    }
+
+    .description__linkMore {
+        margin-top: 10px;        
+    }
+       
+    .description__secondP{
+        display: inline-block;
+    }
+}
+
+
+@media (min-width: 1120px){
+    .feedback{
+        display: none;
+    }
+
+    .header .request{
+        display: inline-block;
+    }
+
+    .description__navItem a:hover {        
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+        
+    }
+
+    .request__menu span{
+        display: inline-block;
+        line-height: 40px;  
+        font-family: "TTLakes-Medium", Arial, serif;
+        font-size: 16px; 
+        margin-right: 8px;     
+    }
+
+    .description__image{               
+        width: 531px;
+    }
+
+    .description__text{                 
+        width: 490px;  
+    }
+}
