@@ -18,11 +18,11 @@ body{
     display: block;
     width: 40px;
     height: 40px;   
-    background-image: url('/image/burger.svg');
+    background-image: url('../image/burger.svg');
 }
 
 .header__menu a:focus{
-    background-image: url('/image/burger_focused.svg');
+    background-image: url('../image/burger_focused.svg');
 }
 
 .container{
@@ -238,19 +238,19 @@ body{
         display: inline-block;
         width: 40px;
         height: 40px;
-        background-image: url(/image/call.svg);       
+        background-image: url(../image/call.svg);       
     }   
     .feedback__chat{
         display: inline-block;
         width: 40px;
         height: 40px;
-        background-image: url(/image/chat.svg);
+        background-image: url(../image/chat.svg);
     }
     .feedback__profile{
         display: inline-block;
         width: 40px;
         height: 40px;
-        background-image: url(/image/profile.svg);
+        background-image: url(../image/profile.svg);
     }
 
     .feedback__list:after{
