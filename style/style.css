@@ -3,11 +3,16 @@
 
 /*===================== Стили для элементов страницы ==============*/
 .body{
-  padding: 35px 32px;    
+  padding: 35px 32px;
+  position: relative;      
 }
 
-.header{
-  position: relative;
+
+.body__mobileMenu.body__mobileMenu-open{
+  position: absolute;
+  top: 0px;    
+  z-index: 1;
+  transform: translateX(400px);
 }
 
 .header:after{
@@ -41,6 +46,7 @@
   margin-left: -18px;
   border-radius: 1px;
 }
+
 
 .contacts__item{
   margin-right: 16px;
@@ -225,7 +231,7 @@
   padding-left: 16px;
 }
 
-.description__link:before{
+.description__link::before{
   content: "";
   height: 11px;
   width: 8px; 
@@ -362,6 +368,11 @@
   .nav__list{
     flex-wrap: wrap; 
   }
+
+  .body__mobileMenu{
+    display: flex;
+  }
+
 }
   
 
