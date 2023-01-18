@@ -9,6 +9,7 @@
   background: #FFFFFF;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);  
   transition: transform 0.8s ease;
+  z-index: 10;
 }
 
 .header-mobileMenu{
@@ -31,8 +32,11 @@
 .header__back:focus{
   background: url(../image/back__focused.svg);
   transition-property: all;
-  transition-duration: 1s; 
+  transition-duration: 200ms; 
+  transform: rotate(90deg);
 }
+
+
 
 .header__search{
   width: 40px;
@@ -60,6 +64,7 @@
 
 .main__mobileMenu{
   flex-grow: 1;
+  background-color: #ffffff;
 }
 
 .menuMobile__link:hover,
